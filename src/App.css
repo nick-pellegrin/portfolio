@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #02d48a;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +36,101 @@
     transform: rotate(360deg);
   }
 }
+
+.css-ptiqhd-MuiSvgIcon-root {
+  color: #fff;
+}
+.css-i4bv87-MuiSvgIcon-root {
+  color: #fff;
+}
+
+.css-13ji48l-MuiPaper-root-MuiAppBar-root {
+  background-color: #00000094 !important;
+}
+
+.css-1si4z7w-MuiPaper-root {
+  background-color: #000000 !important;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.css-12n0uxm-MuiGrid-root {
+  margin-top: 0px !important;
+  margin-left: 0px !important;
+}
+
+footer {
+  background-color: gray;
+  text-align: center;
+  margin-top: auto;
+  padding: 8px;
+}
+
+
+/* BUBBLE FOOTER */
+/* .footer {
+  z-index: 1;
+  --footer-background: #080f1c;
+  display: grid;
+  position: relative;
+  grid-area: footer;
+  min-height: 12rem
+}
+
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: var(--footer-background);
+  filter: url("#blob");
+}
+
+.bubble {
+  position: absolute;
+  left: var(--position, 50%);
+  background: var(--footer-background);
+  border-radius: 100%;
+  animation: 
+    bubble-size
+      var(--time, 4s) ease-in infinite
+      var(--delay, 0s),
+    bubble-move
+      var(--time, 4s) ease-in infinite
+      var(--delay, 0s);
+  transform: translate(-50%, 100%);
+}
+
+@keyframes bubble-size {
+  0%,
+  75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
+}
+
+@Keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
+} */
