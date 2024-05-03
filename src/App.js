@@ -272,16 +272,32 @@ function App(props) {
                   <img style={{height: "90%", width: "100%", objectFit: "cover"}} src={Portrait}/>
                 </Grid>
                 <Grid item xs={12} sm={9}>
-                  TODO TODO TODO
+                Hi, my name is Nick Pellegrin, and I would like to thank you for checking out my portfolio website! Before you go on and read 
+                about some of my personal projects, I would like to share a little information about me. For 5 years I worked hard throughout 
+                high school and achieved the rank of Eagle Scout, which helped teach me many lessons about leadership and likely contributed 
+                to my love of the outdoors. I graduated high school with honors before attending community college for two years, where I was 
+                on the Dean’s Honor List both years. Now I have a Bachelors of Science in Computer Engineering from the University of California 
+                - Santa Barbara. I like to think of myself as very academically interested, especially when it comes to the cutting edge of new 
+                technologies. I find one way I like to spend some of my free time is reading research papers about topics that interest me such 
+                as Artificial Intelligence, neuromorphic computing, and advancements in VLSI design and die fabrication. In my professional 
+                career, I am very lucky to have had some amazing opportunities. I have had experience on the assembly line for circuit boards, 
+                developing low-level embedded systems, as well as high-level software engineering. I am capable at both frontend and backend 
+                development, but I find that I am also very passionate about AI/ML and big data solutions. Outside of the tech space, I really 
+                enjoy spending time outside - I enjoy playing basketball, soccer, and beach volleyball. If I’m not inside, there is a good 
+                chance you can find me at the park, the beach, or just on a walk around my neighborhood. Now that I’ve talked a little about 
+                myself, feel free to browse some of my personal projects! Finally, please note that links to my LinkedIn, Github, and Resume 
+                are all available on the menu bar at the top of this page!
                 </Grid>
               </Grid>
             </Typography>
-            <Typography variant="h3" style={{color: "white"}}>About This Portfolio Website</Typography>
+            
+            {/* <Typography variant="h3" style={{color: "white"}}>About This Portfolio Website</Typography>
             <Divider style={{backgroundColor: "white", marginBottom: "4rem"}}/>
             <Typography variant="body1" align="left" style={{color: "white", marginBottom: "6rem"}}>
               TODO TODO TODO
-            </Typography>                                                                                                                                                   
-            <Typography variant="h3" style={{color: "white"}}>Projects Table of Contents</Typography>
+            </Typography>  */}
+                                                                                                                                                             
+            <Typography variant="h3" style={{color: "white"}}>Portfolio Table of Contents</Typography>
             <Divider style={{backgroundColor: "white", marginBottom: "4rem"}}/>
             <div>
               <Accordion defaultExpanded={{defaultExpanded: "true"}} style={{background: "transparent"}} sx={{border: '2px solid gray'}}>
@@ -333,12 +349,14 @@ function App(props) {
             <Divider style={{backgroundColor: "white", marginBottom: "4rem"}}/>
             <Typography variant="body1" align="left" style={{color: "white", marginBottom: "6rem"}}>
               <Typography variant = "h5" style={{color: "white", fontWeight: "bold", textDecorationLine: 'underline'}}>Project Description</Typography>
+              COMING SOON...
             </Typography>
             
             <Typography variant="h3" style={{color: "white"}}>Vault Opener</Typography>
             <Divider style={{backgroundColor: "white", marginBottom: "4rem"}}/>
             <Typography variant="body1" align="left" style={{color: "white", marginBottom: "6rem"}}>
               <Typography variant = "h5" style={{color: "white", fontWeight: "bold", textDecorationLine: 'underline'}}>Project Description</Typography>
+              COMING SOON...
             </Typography>
           </Container>
         </CustomTabPanel>
@@ -454,6 +472,21 @@ function App(props) {
               where the gray squares are the input nodes, the blue circle is the output node, green connections have positive weights and red connections have negative weights. As flappy bird is a very easy game 
               to play, the model required to play it successfully is minimal. The goal of the NEAT algorithm is to create the most efficient model architecture necessary to accomplich a task. So rather than using 
               a needlessly large model to play flappy bird, NEAT has managed to create a model using only one hidden node.
+            </Typography>
+
+            <Typography variant="h3" style={{color: "white"}}>AI Research</Typography>
+            <Divider style={{backgroundColor: "white", marginBottom: "4rem"}}/>
+            <Typography variant="body1" align="left" style={{color: "white", marginBottom: "6rem"}}>
+              <Typography variant = "h5" style={{color: "white", fontWeight: "bold", textDecorationLine: 'underline'}}>What is this Section?</Typography>
+              Here I will discuss cutting edge AI research that I find interesting and hope to implement in a future project...
+              <Typography variant = "h5" style={{color: "white", fontWeight: "bold", marginTop: "2rem", textDecorationLine: 'underline'}}>LMH Neuron Model (2024)</Typography>
+              COMING SOON...
+              <Typography variant = "h5" style={{color: "white", fontWeight: "bold", marginTop: "2rem", textDecorationLine: 'underline'}}>Gated Attention Coding (2024)</Typography>
+              COMING SOON...
+              <Typography variant = "h5" style={{color: "white", fontWeight: "bold", marginTop: "2rem", textDecorationLine: 'underline'}}>SGLFormer Spiking Transformer (2024)</Typography>
+              COMING SOON...
+              <Typography variant = "h5" style={{color: "white", fontWeight: "bold", marginTop: "2rem", textDecorationLine: 'underline'}}>SpikeGPT (2023)</Typography>
+              COMING SOON...
             </Typography>
           </Container>
         </CustomTabPanel>
