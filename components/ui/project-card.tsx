@@ -15,12 +15,12 @@ export function ProjectCard({ project }: { project: Project }) {
   };
 
   return (
-    <article className="group relative flex min-h-[24rem] flex-col rounded-lg border border-zinc-200 bg-white p-6 transition-colors hover:border-zinc-300 dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-neutral-700">
+    <article className="group relative flex min-h-[24rem] flex-col rounded-3xl border border-zinc-200 bg-white p-6 transition duration-200 hover:scale-[1.02] hover:border-zinc-300 dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-neutral-700">
       <Link
         href={`/${project.slug}`}
         aria-label={project.title}
         onClick={saveScroll}
-        className="absolute inset-0 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-500"
+        className="absolute inset-0 rounded-3xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-500"
       />
       <div className="flex items-start justify-between gap-4">
         <h3 className="text-lg font-semibold tracking-tight text-zinc-900 dark:text-neutral-50">
