@@ -1,0 +1,108 @@
+/* =============================================================================
+   PORTFOLIO DESIGN SYSTEM
+   Every token below is a knob you can turn without touching component markup.
+   Tailwind utilities used in the components (bg-zinc-900, text-white,
+   font-sans, etc.) resolve through these variables.
+   ============================================================================= */
+
+
+/* -----------------------------------------------------------------------------
+   1. PAGE SURFACE  (body background + text color)
+   Consumed directly by the `body` rule in app/globals.css. Dark values apply
+   when `.dark` is on <html>; the ThemeToggle component manages that class
+   based on user preference (light / dark / system).
+   Optional Tailwind aliases exposed in §5 (bg-background, text-foreground).
+   ----------------------------------------------------------------------------- */
+
+:root {
+  --background: #faf9f5;
+  --foreground: #171717;
+  /* Main accent used throughout the site (also the scroll-expanding backdrop
+     behind the hero). Accepts any <background> shorthand value (solid color,
+     gradient, image url, etc.). */
+  --primary-color: linear-gradient(135deg, #ff9666 0%, #ff9d83 100%);
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  /* --primary-color: linear-gradient(135deg, #e37b4b 0%, #de7c62 100%); */
+  /* --primary-color: linear-gradient(135deg, #fc773a 0%, #fc7e57 100%); */
+}
+
+
+/* -----------------------------------------------------------------------------
+   2. FONT FAMILIES
+   next/font loads Geist in app/layout.tsx and exposes it on <html> as
+   --font-geist-sans / --font-geist-mono. Re-point these to swap fonts site-wide.
+   Tailwind utilities: font-sans, font-mono.
+   ----------------------------------------------------------------------------- */
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+
+/* -----------------------------------------------------------------------------
+   3. ZINC SCALE  (neutral palette)
+   Overrides Tailwind's built-in zinc so every bg-zinc-*, text-zinc-*,
+   border-zinc-* utility — including dark: and /opacity variants — resolves
+   to these values.
+
+   Where each shade appears in the site:
+     zinc-50   text on dark surfaces; primary button text (dark mode)
+     zinc-100  secondary button hover (light mode)
+     zinc-200  borders in light mode (cards, buttons, tags, navbar/footer)
+     zinc-300  card border on hover (light mode)
+     zinc-400  muted body copy (dark mode)
+     zinc-500  muted body copy; idle social icons (light mode)
+     zinc-600  main paragraph text (light mode)
+     zinc-700  primary button hover (light mode)
+     zinc-800  borders in dark mode (cards, buttons, tags, navbar/footer);
+               card border on hover (dark mode, via zinc-700)
+     zinc-900  primary button bg (light); headings (light mode);
+               primary button text (dark mode); secondary button hover (dark)
+     zinc-950  card + navbar surface in dark mode
+   ----------------------------------------------------------------------------- */
+
+@theme {
+  --color-zinc-50:  #fafafa;
+  --color-zinc-100: #f4f4f5;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-500: #71717a;
+  --color-zinc-600: #52525b;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-800: #27272a;
+  --color-zinc-900: #18181b;
+  --color-zinc-950: #09090b;
+}
+
+
+/* -----------------------------------------------------------------------------
+   4. ABSOLUTES
+   bg-white   card + navbar surface in light mode
+   text-white primary button text in light mode
+   Changing --color-white retints both call sites. If you want them to diverge,
+   change one of the two usages to a different utility first.
+   ----------------------------------------------------------------------------- */
+
+@theme {
+  --color-white: #ffffff;
+  --color-black: #000000;
+}
+
+
+/* -----------------------------------------------------------------------------
+   5. SEMANTIC ALIASES  (optional — not currently referenced by components)
+   Tailwind utilities bg-background / text-foreground that mirror §1, so if you
+   later want components to use semantic names instead of zinc-* + white, these
+   are ready. Leaving them in costs nothing.
+   ----------------------------------------------------------------------------- */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}

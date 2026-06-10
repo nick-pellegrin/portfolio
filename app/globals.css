@@ -1,26 +1,98 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@import "../styles/design-system.css";
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  summary {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-lexend-deca), sans-serif;
+  }
+}
+
+/* ===========================================================================
+   MODAL ENTRANCE (project detail dialog)
+
+   The backdrop fades in; the panel fades + slight scale/translate.
+   Time-based, not scroll-driven.
+   =========================================================================== */
+
+@keyframes modal-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-panel-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-backdrop {
+  animation: modal-backdrop-in 200ms ease-out both;
+}
+
+.modal-panel {
+  animation: modal-panel-in 240ms ease-out both;
+}
+
+
+/* ===========================================================================
+   HERO CARD ENTRANCE (glass card on first page load)
+
+   Rises up while fading in. Time-based, fires once on mount.
+   =========================================================================== */
+
+@keyframes hero-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-card {
+  animation: hero-card-in 2800ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+
+/* ===========================================================================
+   ACCESSIBILITY — honor OS-level reduced-motion preference.
+   Disables every animation + transition defined above.
+   =========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-backdrop,
+  .modal-panel,
+  .hero-card {
+    animation: none;
+  }
 }
