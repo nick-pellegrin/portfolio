@@ -13,7 +13,7 @@ export function ProjectCard({ project }: { project: Project }) {
   };
 
   return (
-    <article className="group relative flex min-h-[24rem] flex-col overflow-hidden rounded-3xl border border-zinc-200 bg-white transition duration-200 hover:scale-[1.02] hover:border-zinc-300 dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-neutral-700">
+    <article className="group relative flex min-h-[24rem] flex-col overflow-hidden rounded-3xl border border-zinc-200 bg-white transition duration-200 hover:scale-[1.05] hover:border-zinc-300 dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-neutral-700">
       <Link
         href={`/${project.slug}`}
         aria-label={project.title}

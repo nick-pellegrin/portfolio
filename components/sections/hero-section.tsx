@@ -35,7 +35,7 @@ export function HeroSection() {
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-black/50 via-black/30 to-black/60"
       />
-      <div className="flex h-full w-full items-center justify-center px-6">
+      <div className="flex h-full w-full items-center justify-center px-6 pb-32">
         <div className="hero-card flex w-full max-w-xl flex-col items-start gap-6 rounded-3xl border border-white/20 bg-white/5 p-8 shadow-2xl backdrop-blur-md sm:p-10">
           <h1
             style={{

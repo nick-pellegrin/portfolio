@@ -15,6 +15,7 @@ export type Project = {
 export const competitions: Project[] = [
   {
     slug: "kaggle-competition-one",
+    image: "/birdclef-2026.png",
     title: "Kaggle: Competition One",
     description:
       "Placement and a one-line summary of the task. Replace with the real competition, your rank, and the technique that mattered most.",
@@ -25,6 +26,7 @@ export const competitions: Project[] = [
   },
   {
     slug: "kaggle-competition-two",
+    image: "/recod_ai_cover.png",
     title: "Kaggle: Competition Two",
     description:
       "Another competition placeholder. Swap for a real entry — dataset, model family you settled on, and final leaderboard position.",
@@ -35,6 +37,7 @@ export const competitions: Project[] = [
   },
   {
     slug: "drivendata-challenge",
+    image: "/arc-agi-2-cover.png",
     title: "DrivenData Challenge",
     description:
       "Non-Kaggle competition placeholder. One sentence on the task, one on the approach, one on the result.",
@@ -43,6 +46,7 @@ export const competitions: Project[] = [
   },
   {
     slug: "kaggle-competition-three",
+    image: "/stanford-rna-folding-2026.png",
     title: "Kaggle: Competition Three",
     description:
       "Placeholder for an NLP competition. Describe the corpus, how you handled tokenization, and your final score.",
@@ -52,6 +56,7 @@ export const competitions: Project[] = [
   },
   {
     slug: "kaggle-competition-four",
+    image: "/playground-s5-e2.png",
     title: "Kaggle: Competition Four",
     description:
       "Tabular regression placeholder. Note the target metric, the baseline you beat, and any cross-validation trick that worked.",
@@ -62,6 +67,7 @@ export const competitions: Project[] = [
   },
   {
     slug: "aicrowd-challenge",
+    image: "/playground-s6-e2.png",
     title: "AICrowd Challenge",
     description:
       "Reinforcement learning placeholder. One line on the environment, one on the agent architecture, one on the outcome.",
@@ -70,6 +76,7 @@ export const competitions: Project[] = [
   },
   {
     slug: "zindi-africa-competition",
+    image: "/playground-s5-e3.png",
     title: "Zindi: Africa Competition",
     description:
       "Social-good competition placeholder. Mention the problem domain, the dataset size, and the leaderboard rank you finished at.",
