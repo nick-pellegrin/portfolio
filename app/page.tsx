@@ -1,6 +1,7 @@
 import { FilteredGrid } from "@/components/sections/filtered-grid";
 import { competitions, projects } from "@/app/projects";
 import { HeroSection } from "@/components/sections/hero-section";
+import { LogoMarquee } from "@/components/sections/logo-marquee";
 import { HomeScrollRestore } from "@/components/ui/home-scroll-restore";
 import { GradientHeading } from "@/components/ui/gradient-heading";
 
@@ -9,6 +10,7 @@ export default function Home() {
     <>
       <HomeScrollRestore />
       <HeroSection />
+      <LogoMarquee />
       <div className="mx-auto w-full max-w-5xl px-6">
         <section id="about" className="py-16 sm:py-20 scroll-mt-16">
           <div className="mb-6">

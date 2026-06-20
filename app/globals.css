@@ -89,10 +89,50 @@ body {
    Disables every animation + transition defined above.
    =========================================================================== */
 
+/* ===========================================================================
+   LOGO MARQUEE (infinite-loop tech strip peeking under the hero)
+
+   The track holds two identical copies of the logo set laid out in a row.
+   Translating it by -50% scrolls exactly one copy off-screen, at which point
+   the second copy sits precisely where the first began — so the reset is
+   invisible and the loop is seamless. Pauses on hover.
+   =========================================================================== */
+
+@keyframes logo-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-marquee-track {
+  animation: logo-marquee 60s linear infinite;
+  width: max-content;
+  /* Promote to its own compositor layer so the transform keeps animating on
+     the GPU while the main thread is busy handling scroll — without this the
+     marquee visibly stalls mid-scroll. */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.logo-marquee:hover .logo-marquee-track {
+  animation-play-state: paused;
+}
+
+
+/* ===========================================================================
+   ACCESSIBILITY — honor OS-level reduced-motion preference.
+   Disables every animation + transition defined above.
+   =========================================================================== */
+
 @media (prefers-reduced-motion: reduce) {
   .modal-backdrop,
   .modal-panel,
-  .hero-card {
+  .hero-card,
+  .logo-marquee-track {
     animation: none;
   }
 }

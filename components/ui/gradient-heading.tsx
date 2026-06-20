@@ -18,7 +18,7 @@ export function GradientHeading({
         backgroundClip: "text",
         color: "transparent",
       }}
-      className={`w-fit text-3xl font-semibold tracking-tight sm:text-4xl ${className}`}
+      className={`w-fit text-4xl font-semibold tracking-tight sm:text-5xl ${className}`}
     >
       {children}
     </h2>
