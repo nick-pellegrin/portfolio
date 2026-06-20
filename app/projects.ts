@@ -3,6 +3,8 @@ export type Project = {
   title: string;
   description: string;
   tags: string[];
+  /** Card banner image (top third of the card). Path under /public. */
+  image?: string;
   github?: string;
   demo?: string;
   kaggle?: string;

@@ -44,7 +44,7 @@ export function HeroSection() {
               backgroundClip: "text",
               color: "transparent",
             }}
-            className="text-left text-5xl font-semibold tracking-tight drop-shadow-lg sm:text-6xl lg:text-7xl"
+            className="text-left text-5xl font-bold italic tracking-tight drop-shadow-lg sm:text-6xl lg:text-7xl"
           >
             Hi, I'm Nick
           </h1>

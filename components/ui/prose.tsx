@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 
 export function H2({ children }: { children: ReactNode }) {
   return (
-    <h2 className="text-xl font-semibold text-zinc-900 dark:text-neutral-50 [&:not(:first-child)]:mt-10">
+    <h2 className="text-xl font-bold text-zinc-900 dark:text-neutral-50 [&:not(:first-child)]:mt-10">
       {children}
     </h2>
   );
@@ -14,7 +14,7 @@ export function H2({ children }: { children: ReactNode }) {
 
 export function H3({ children }: { children: ReactNode }) {
   return (
-    <h3 className="text-base font-semibold text-zinc-900 dark:text-neutral-50 [&:not(:first-child)]:mt-8">
+    <h3 className="text-base font-bold text-zinc-900 dark:text-neutral-50 [&:not(:first-child)]:mt-8">
       {children}
     </h3>
   );

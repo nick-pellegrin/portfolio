@@ -23,7 +23,7 @@ export function ProjectLayout({
 
       <header className="mb-10">
         <div className="flex items-start justify-between gap-4">
-          <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl dark:text-neutral-50">
+          <h1 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl dark:text-neutral-50">
             {project.title}
           </h1>
           <div className="mt-2 flex shrink-0 items-center gap-2 text-zinc-500 dark:text-neutral-400">
