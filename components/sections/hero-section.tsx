@@ -57,21 +57,20 @@ export function HeroSection() {
             <a
               href="#competitions"
               style={{
-                backgroundImage:
-                  "linear-gradient(135deg, #ff9666 0%, #ff9d83 100%)",
+                backgroundImage: "var(--primary-color)",
               }}
               className="inline-flex h-10 items-center gap-1.5 rounded-full px-5 text-sm font-medium text-black transition-opacity hover:opacity-90"
             >
-              Competitions
+              See My Work
               <ArrowRight className="h-4 w-4" />
             </a>
-            <a
+            {/* <a
               href="#projects"
               className="inline-flex h-10 items-center gap-1.5 rounded-full bg-white px-5 text-sm font-medium text-black transition-opacity hover:opacity-90"
             >
               Projects
               <ArrowRight className="h-4 w-4" />
-            </a>
+            </a> */}
           </div>
           
         </div>

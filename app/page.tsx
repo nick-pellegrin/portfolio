@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <HomeScrollRestore />
       <HeroSection />
-      <LogoMarquee />
+      {/* <LogoMarquee /> */}
       <div className="mx-auto w-full max-w-5xl px-6">
         <section id="about" className="py-16 sm:py-20 scroll-mt-16">
           <div className="mb-6">

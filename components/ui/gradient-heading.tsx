@@ -13,7 +13,7 @@ export function GradientHeading({
   return (
     <h2
       style={{
-        backgroundImage: "linear-gradient(135deg, #ff9666 0%, #ff9d83 100%)",
+        backgroundImage: "var(--primary-color)",
         WebkitBackgroundClip: "text",
         backgroundClip: "text",
         color: "transparent",

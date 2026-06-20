@@ -21,7 +21,7 @@
      behind the hero). Accepts any <background> shorthand value (solid color,
      gradient, image url, etc.). */
   /* --primary-color: linear-gradient(135deg, #ff9666 0%, #ff9d83 100%); */
-  --primary-color: linear-gradient(135deg, #FF9361 0%, #FF9D83 100%);
+  --primary-color: linear-gradient(135deg, #ff8555 0%, #fc8165 100%);
 }
 
 .dark {
