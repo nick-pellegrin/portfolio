@@ -1,6 +1,7 @@
 import { FilteredGrid } from "@/components/sections/filtered-grid";
 import { competitions, projects } from "@/app/projects";
 import { HeroSection } from "@/components/sections/hero-section";
+import { HeroBackground } from "@/components/sections/hero-background";
 import { LogoMarquee } from "@/components/sections/logo-marquee";
 import { HomeScrollRestore } from "@/components/ui/home-scroll-restore";
 import { GradientHeading } from "@/components/ui/gradient-heading";
@@ -10,9 +11,19 @@ export default function Home() {
   return (
     <>
       <HomeScrollRestore />
+      <HeroBackground />
       <HeroSection />
       {/* <LogoMarquee /> */}
 
+      {/* Opaque sheet: everything below the hero rides above the fixed
+          background image (z-10) on a solid page background, so it scrolls up
+          "on top of" the pinned hero image. `flow-root` makes this a block
+          formatting context so the About card's negative "peek" margin pulls
+          only the card up over the image — it doesn't drag the solid
+          background up with it. The sheet's top edge stays at the hero's
+          bottom (the card's center), so the image fills the full first screen
+          and the solid color isn't visible until you scroll. */}
+      <div className="relative z-10 flow-root bg-[var(--background)]">
       {/* About lives in its own enlarged card whose center lines up with the
           bottom of the hero image (exactly half of it peeks into the hero). */}
       <HalfPeekSection
@@ -70,6 +81,7 @@ export default function Home() {
           description="" // "A selection of things I've built."
           items={projects}
         />
+        </div>
       </div>
     </>
   );

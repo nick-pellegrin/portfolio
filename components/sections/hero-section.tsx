@@ -2,39 +2,9 @@ import { ArrowRight } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="relative isolate -mt-14 h-screen w-full overflow-hidden">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/ireland-beach-hero-background.png"
-        alt=""
-        aria-hidden
-        style={{
-          position: "absolute",
-          inset: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: "center",
-          zIndex: -20,
-        }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          zIndex: -15,
-          backdropFilter: "blur(10px)",
-          WebkitBackdropFilter: "blur(10px)",
-          maskImage:
-            "linear-gradient(to right, black 0%, transparent 25%, transparent 75%, black 100%)",
-          WebkitMaskImage:
-            "linear-gradient(to right, black 0%, transparent 25%, transparent 75%, black 100%)",
-        }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-black/50 via-black/30 to-black/60"
-      />
+    <section className="relative -mt-14 h-screen w-full">
+      {/* Background image lives in <HeroBackground>, a fixed full-viewport layer
+          rendered at the page root so it stays pinned while content scrolls. */}
       <div className="flex h-full w-full items-center justify-center px-6 pb-32">
         <div className="hero-card flex w-full max-w-xl flex-col items-start gap-6 rounded-3xl border border-white/20 bg-white/5 p-8 shadow-2xl backdrop-blur-md sm:p-10">
           <h1

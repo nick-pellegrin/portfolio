@@ -33,6 +33,13 @@ const themeInitScript = `
     var d = t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches);
     if (d) document.documentElement.classList.add('dark');
   } catch (e) {}
+  try {
+    // We manage scroll position ourselves (HomeScrollRestore). Disabling the
+    // browser's native restoration stops it from nudging the page down a few
+    // pixels on refresh, which would reveal a sliver of the solid page color
+    // below the fixed hero image.
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  } catch (e) {}
 })();
 `;
 
